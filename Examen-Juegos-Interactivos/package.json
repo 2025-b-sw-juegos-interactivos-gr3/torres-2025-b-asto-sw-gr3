@@ -1,0 +1,19 @@
+{
+  "name": "examen-juegos-interactivos",
+  "version": "1.0.0",
+  "description": "Babylon.js Archaeologist Game",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babylonjs": "^8.39.2",
+    "babylonjs-loaders": "^8.39.2",
+    "vite": "^7.2.6"
+  }
+}

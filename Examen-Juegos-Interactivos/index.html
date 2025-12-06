@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon.js Archaeologist Game</title>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            outline: none;
+        }
+
+        #instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            font-family: sans-serif;
+            pointer-events: none;
+        }
+
+        #artifactCount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 24px;
+            font-family: sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            pointer-events: none;
+        }
+
+        #victoryModal {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: gold;
+            padding: 40px;
+            border: 2px solid gold;
+            text-align: center;
+            font-family: sans-serif;
+            z-index: 10;
+        }
+
+        #victoryModal h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #victoryModal p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="instructions">
+        <h2>Misión del Arqueólogo</h2>
+        <p>WASD para Moverse</p>
+        <p>E o Espacio para Recoger / Dejar Artefacto</p>
+        <p>¡Encuentra el artefacto en las ruinas y llévalo a la tienda!</p>
+    </div>
+    <div id="artifactCount">
+        Artefactos: 0/5
+    </div>
+    <div id="victoryModal">
+        <h1>¡MISIÓN CUMPLIDA!</h1>
+        <p>Has recuperado todos los artefactos.</p>
+        <p>El museo estará orgulloso.</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
